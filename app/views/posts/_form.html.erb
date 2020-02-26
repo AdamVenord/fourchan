@@ -1,0 +1,10 @@
+<h1><%= @post.id ? 'edit post' : "Create post" %></h1>
+<hr />
+<%= form_for [@follower, @post] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, autofocus: true %>
+  <br />
+  <%= f.label :body %>
+  <%= f.text_area :name, required: true %>
+  <%= f.submit %>
+<% end %>

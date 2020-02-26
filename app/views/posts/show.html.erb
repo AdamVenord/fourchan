@@ -1,0 +1,6 @@
+<h1><%= @follower.name %> - <%= @post.name %> </h1>
+<p> <%= @post.body %></p>
+<%= link_to 'edit post', edit_follower_post_path([@follower, @post]) %>
+<%= link_to 'delete post', [@follower, @post], method: :delete %>
+<%= link_to 'back to posts', follower_posts_path(@follower)
+

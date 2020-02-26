@@ -1,0 +1,7 @@
+<h1>Click a post to view content</h1>
+<%= link_to 'Create a new post', new_sub_post_path(@follower) %>
+<ul>
+  <% @posts.each do |post| %>
+    <li><%= link_to post.name, [@follower, post] %></li>
+    <% end %>
+</ul>

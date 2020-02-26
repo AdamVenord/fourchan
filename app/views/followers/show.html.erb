@@ -1,0 +1,8 @@
+<h1> <%= @follower.name %> </h1>
+<hr />
+<p> What would you like to do? </p>
+<%= link_to "View post", follower_post_path(@follower) %>
+<br />
+<%= link_to 'Edit follower', edit_follower_path(@follower) %>
+<br />
+<%= link_to 'Delete follower', @follower, method: :delete %>

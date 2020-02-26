@@ -1,0 +1,8 @@
+<h1>Click a follower to view</h1>
+<%= link_to 'Create a new follower', new_follower_path %>
+<ul>
+  <% @followers.each do |follower| %>
+    <li><%= link_to follower.name, follower %></li>
+    <% end %>
+</ul>
+
