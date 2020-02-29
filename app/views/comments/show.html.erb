@@ -1,0 +1,10 @@
+<h1>Add a comment</h1>
+<%= form_for [@post, @comment] do |f| %>
+  <%= f.label :body %>
+  <%= f.text_area :body, required: true %>
+  <br />
+  <%= f.label :author%>
+  <%= f.text_area :author, placeholder: 'leave blank to anonymous' %>
+  <br />
+  <%= f.submit %>
+<% end %>

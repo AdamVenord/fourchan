@@ -4,4 +4,8 @@ Rails.application.routes.draw do
   resources :followers do
     resources :posts
   end
+
+  resources :posts do
+    resources :comments
+  end
 end

@@ -1,5 +1,13 @@
 <h1><%= @follower.name %> - <%= @post.name %> </h1>
 <p> <%= @post.body %></p>
+<hr>Comments</h2>
+
+<% @post.comments.each do |comment| %>
+  <%= render 'comment/comment', {comment: comment } %>
+<% end %>
+
+<hr />
+<%= link_to 'add comment', new_post_comment_path(@post) %>
 <%= link_to 'edit post', edit_follower_post_path([@follower, @post]) %>
 <%= link_to 'delete post', [@follower, @post], method: :delete %>
 <%= link_to 'back to posts', follower_posts_path(@follower)
